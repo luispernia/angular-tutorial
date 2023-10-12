@@ -7,6 +7,7 @@ import { HeroService } from '../hero.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent {
   heroes: Hero[] = [];
 
@@ -19,5 +20,4 @@ export class DashboardComponent {
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(1, 5));
   }
-
 }
